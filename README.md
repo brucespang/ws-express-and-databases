@@ -32,9 +32,7 @@ simple as you only need to run the following command:
 
 ```bash
 $ sudo apt-get update
-$ sudo apt-get install postgresql-9.3
-$ sudo apt-get install g++
-$ sudo apt-get install postgresql-server-dev-9.3
+$ sudo apt-get install postgresql-9.3 g++ postgresql-server-dev-9.3
 ```
 
 ## Part 2: Create the Users Database
