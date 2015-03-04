@@ -24,3 +24,29 @@ understand the following topics:
 * Rudimentary understanding of HTML.
 * Basic understanding of HTTP GET and POST requests.
 * Basic understanding of HTML forms.
+
+## Part 1: Install Postgres
+
+Your first task is to install the postgres database system. This is
+simple as you only need to run the following command:
+
+```bash
+$ sudo apt-get update
+$ sudo apt-get install postgresql-9.3
+$ sudo apt-get install g++
+$ sudo apt-get install postgresql-server-dev-9.3
+```
+
+## Part 2: Create the Users Database
+
+The next step is to create the users database. This will require you
+to login to postgres as the postgres user and create a new user in the
+database system and a new database. The steps are simple:
+
+```bash
+$ sudo -u postgres psql
+postgres=> alter user postgres password 'apassword';
+postgres=> create user student createdb createuser password 'student';
+postgres=> create database student owner student;
+postgres=> \q
+```
