@@ -81,8 +81,9 @@ $ PGPASSWORD=student psql -U student -h localhost -d users --file=db/schema/drop
 ## Part 3: Running The Starter Code
 
 We have provided you starter code that runs out-of-the-box. First,
-download the [starter code] and unzip it locally. You can then enter
-the unarchived directory and install the `npm` modules:
+download the [starter code] and unzip it locally into your git
+repository. You can then enter the unarchived directory and install
+the `npm` modules:
 
 ```bash
 $ npm install
