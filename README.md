@@ -52,7 +52,7 @@ postgres=> \q
 After you do this you will be able to login as the student user:
 
 ```bash
-$ GPASSWORD=student psql -U student -h localhost -d users
+$ PGPASSWORD=student psql -U student -h localhost -d users
 ```
 
 This should connect you to the `users` database and execute queries to
