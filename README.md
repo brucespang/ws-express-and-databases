@@ -24,5 +24,3 @@ understand the following topics:
 * Rudimentary understanding of HTML.
 * Basic understanding of HTTP GET and POST requests.
 * Basic understanding of HTML forms.
-
-
