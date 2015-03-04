@@ -78,5 +78,46 @@ table if you need to start over. You can run this:
 $ PGPASSWORD=student psql -U student -h localhost -d users --file=db/schema/drop.sql
 ```
 
-## Part 3: Implement The /users Route
+## Part 3: Running The Starter Code
 
+We have provided you starter code that runs out-of-the-box. First,
+download the [starter code] and unzip it locally. You can then enter
+the unarchived directory and install the `npm` modules:
+
+```bash
+$ npm install
+```
+
+After you get this going you can then test out the express app by
+running this command:
+
+```bash
+$ NODE_PATH=lib node app.js
+```
+
+We include the `NODE_PATH` environment variable to tell `node` where
+to find our database library (see next part). This will run the
+application on port 3000. You should be able to connect to the
+application at [http://localhost:3000/users] from a web browser. This
+will then correctly display:
+
+```
+Not implemented yet.
+```
+
+[starter code]: https://github.com/umass-cs-326/ws-express-and-databases/archive/master.zip
+
+## Part 4: Implement User List
+
+The first piece of functionality you need to implement in this
+workshop is the display of the users in the database. In addition, you
+will implement an HTML form that you will use to add new users to the
+database. Naturally, you will need to provide the proper database
+calls to invoke queries on the database. We have provided you a
+framework to start from. The two files of interest include:
+
+* [app.js] - the express application which includes the routes.
+* [lib/db/index.js] - the database module that will be responsible for
+  communicating with the database.
+
+You will notice in [app.js] that we include 
