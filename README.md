@@ -50,3 +50,33 @@ postgres=> create user student createdb createuser password 'student';
 postgres=> create database student owner student;
 postgres=> \q
 ```
+
+After you do this you will be able to login as the student user:
+
+```bash
+$ GPASSWORD=student psql -U student -h localhost -d users
+```
+
+This should connect you to the `users` database and execute queries to
+create tables, insert data, etc. I recommend putting this in a bash
+script so you do not need to type it out again.
+
+## Part 3: Create The Users Table
+
+We have provided a [schema](db/schema/users.sql) for the table you
+need to create (`db/schema/users.sql`). You can easily run this SQL
+file from the command line with the following command:
+
+```bash
+$ PGPASSWORD=student psql -U student -h localhost -d users --file=db/schema/users.sql
+```
+
+We have also provided an [SQL script](db/schema/drop.sql) to drop the
+table if you need to start over. You can run this:
+
+```bash
+$ PGPASSWORD=student psql -U student -h localhost -d users --file=db/schema/drop.sql
+```
+
+## Part 3: Implement The /users Route
+
