@@ -121,4 +121,42 @@ framework to start from. The two files of interest include:
 * [lib/db/index.js](lib/db/index.js) - the database module that will
   be responsible for communicating with the database.
 
-You will notice in [app.js](app.js) that we include 
+You will notice in [app.js](app.js) that we include two routes that
+you will need to implement:
+
+```javascript
+app.get('/users', function (req, res) {
+  res.send('<p>Not implemented yet.</p>');
+});
+
+app.get('/users/add', function (req, res) {
+  res.send('<p>Not implemented yet.</p>');
+});
+```
+
+The first route is responsible for displaying a list of the users as
+well as an HTML form for adding new users. The second route is for
+adding the user data passed from the form to the database.
+
+You will also notice in [lib/db/index.js](lib/db/index.js) function
+stubs where you are required to add the calls to the database:
+
+```javascript
+function add(user, cb) {
+  cb('Not implemented yet');
+}
+
+function list(cb) {
+  cb('Not implemented yet');
+}
+```
+
+The first function takes care of adding a user to the database and the
+second function is responsible for returning a list of users.
+
+In this part your job is to implement the `/users` route and the
+`list` function in the database library. Your `/users` route should
+generate an HTML table of the users currently in the database followed
+by a form to add the users. Our implementation looks like this:
+
+<img src="images/users.png">
