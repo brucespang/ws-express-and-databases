@@ -205,3 +205,27 @@ You will need to check to make sure that all the values are
 *defined*. That is, you should not allow a user to be added unless all
 of the parameters have been defined. If there are any undefined
 parameters you should simply redirect to the `/users` route.
+
+After you verify that you have received all the parameters for the new
+user you should create a user object to be passed to the database
+library. The database library will then form the proper query to
+insert the user into the database.
+
+You should redirect back to `/users` after you have add the new user
+into the database. The displayed users should show the new addition to
+the table of users.
+
+## Notes and Hints
+
+Make sure you handle callbacks carefully. You may not alter the
+*interface* to the database library. The database functions expect a
+callback to be passed to them. Those callbacks will be responsible for
+communicating back to the client appropriately (i.e., success or
+error). You should implement this workshop in slow increments. Add
+just a little bit of code and test to see if it is working. If you add
+too much code before testing it is harder to see where you went wrong.
+
+## Submission
+
+You must submit your workshop to your gitblit repository by the
+assigned due date.
