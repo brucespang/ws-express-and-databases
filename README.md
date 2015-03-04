@@ -116,8 +116,9 @@ database. Naturally, you will need to provide the proper database
 calls to invoke queries on the database. We have provided you a
 framework to start from. The two files of interest include:
 
-* [app.js] - the express application which includes the routes.
-* [lib/db/index.js] - the database module that will be responsible for
-  communicating with the database.
+* [app.js](app.js) - the express application which includes the
+  routes.
+* [lib/db/index.js](lib/db/index.js) - the database module that will
+  be responsible for communicating with the database.
 
-You will notice in [app.js] that we include 
+You will notice in [app.js](app.js) that we include 
