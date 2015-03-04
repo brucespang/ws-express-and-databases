@@ -160,3 +160,48 @@ generate an HTML table of the users currently in the database followed
 by a form to add the users. Our implementation looks like this:
 
 <img src="images/users.png">
+
+Generating the table of users is relatively easy. To help you out we
+are providing you the HTML for the form:
+
+```html
+<form action="/users/add" method="get">
+  UID:<br> <input type="text" name="uid"><br><br>
+  First Name:<br> <input type="text" name="fname"><br><br>
+  Last Name:<br> <input type="text" name="lname"><br><br>
+  Password:<br> <input type="text" name="password"><br><br>
+  Age:<br> <input type="text" name="age"><br><br>
+  <input type="submit" value="Add User">
+</form><br><br>
+```
+
+You will notice that the form is using an HTTP `get` request to send
+the data to the `/users/add` route. You are to implement this route in
+the next part.
+
+Some things you should take into consideration in your implementation
+include how you handle errors in your application. If there is an
+error communicating to the database your application should not
+fail. That is, it should send back to the client a helpful error
+message indicating that there was a problem communicating to the
+database. As part of that error message you could include a link to
+the `/users` route so the user can get back to the list and form.
+
+## Part 5: Implement User Add
+
+In this part you need to implement the `/users/add` route in
+[app.js](app.js) and the `add` function in
+[lib/db/index.js](lib/db/index.js). Because the form is sending the
+request as an HTTP `get` method you will be able to access the
+querystring using the `req.query` property to extract the received
+values from the form. For example, to get the user's first name from
+the form you would do the following:
+
+```javascript
+ var fname = req.query.fname;
+```
+
+You will need to check to make sure that all the values are
+*defined*. That is, you should not allow a user to be added unless all
+of the parameters have been defined. If there are any undefined
+parameters you should simply redirect to the `/users` route.
