@@ -99,8 +99,9 @@ $ NODE_PATH=lib node app.js
 We include the `NODE_PATH` environment variable to tell `node` where
 to find our database library (see next part). This will run the
 application on port 3000. You should be able to connect to the
-application at http://localhost:3000/users from a web browser. This
-will then correctly display:
+application at
+[http://localhost:3000/users](http://localhost:3000/users) from a web
+browser. This will then correctly display:
 
 ```
 Not implemented yet.
